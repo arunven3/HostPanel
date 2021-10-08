@@ -6,8 +6,7 @@ class DataCheck
 {
     public  static function check($data,$action){
         if ($action==="escape"){
-            $data=self::escape_input($data);
-            return $data;
+            return self::escape_input($data);
         }
     }
     private  static function escape_input($data) {

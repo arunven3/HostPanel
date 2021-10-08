@@ -17,12 +17,12 @@ class securitycheck
                 return false;
             }
         }else{
-            $_SESSION['error_message']="Login to Countinue";
+            $_SESSION['error_message']="Login to Continue";
             return false;
         }
     }
     public static function logot(){
         $_SESSION['token']= null;
-        $_SESSION['success_message']="Logout Sucessfully";
+        $_SESSION['success_message']="Logout Successful";
     }
 }

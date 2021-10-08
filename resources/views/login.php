@@ -4,7 +4,7 @@ use App\Classes\TwigLoader;
 use App\Classes\Messages;
 if($_SERVER['REQUEST_METHOD']==="POST")
 {
-    if(isset($_POST['username'])&&isset($_POST['password'])){
+    if(isset($_POST['username']) && isset($_POST['password'])){
 
         $user = \App\Classes\DataCheck::check($_POST['username'],'escape');
         $pass=\App\Classes\DataCheck::check($_POST['password'],'escape');

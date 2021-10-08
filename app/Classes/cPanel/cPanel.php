@@ -14,12 +14,11 @@ class cPanel
     private $exPage; 
 
     function __construct( )
-    {
- 
-        $this->host ="CPanel.Host"; //USE CPanel Host address in CPanel.Host
-        $this->port = $port = CPanel.port; //USE CPanel Port address in CPanel.Port
-        $this->username = 'CPanel.Username';//USE CPanel Username address in CPanel.Username
-        $this->password = 'CPanel.Password'; //USE CPanel Password address in CPanel.Password
+    { 
+        $this->host ="217.182.175.206"; //USE CPanel Host address in CPanel.Host
+        $this->port = $port = 2083; //USE CPanel Port address in CPanel.Port
+        $this->username = 'demohosti';//USE CPanel Username address in CPanel.Username
+        $this->password = 'Y0NgO+4Z52oxv#'; //USE CPanel Password address in CPanel.Password
         $this->log = FALSE;
         $this->cFile = __DIR__ . "/cookies/hostpanel";
         $this->signIn();

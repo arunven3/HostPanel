@@ -4,11 +4,9 @@ class Check{
     public static function token($string,$action)
     {
         if ($action === "generate") {
-            $encrypted_string = self::put($string);
-            return $encrypted_string;
+            return self::put($string);
         } elseif ($action === "get") {
-            $decrypted_string = self::get($string);
-            return $decrypted_string;
+            return self::get($string);
         }
         elseif ($action==="check"){
 
@@ -16,20 +14,17 @@ class Check{
     }
     private static function ip(){
         require_once 'IpGet.php';
-        $ip = IpGet::get_ip_address();
-        return $ip;
+        return IpGet::get_ip_address();
     }
     private static function put($string){
         require_once 'TokenGen.php';
         $ip=self::ip();
-        $encrypted_string = TokenGen::enc($string, $ip);
-        return $encrypted_string;
+        return TokenGen::enc($string, $ip);
     }
     private static function get($encrypted_string){
         require_once 'TokenGen.php';
         $ip= self::ip();
-        $decrypted_string = TokenGen::dec($encrypted_string, $ip);
-        return $decrypted_string;
+        return TokenGen::dec($encrypted_string, $ip);
     }
     private static function check(){
 
